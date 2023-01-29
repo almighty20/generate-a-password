@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Generate a Password</title>
+    <meta name="description" content="Generate a secure password easily!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"> Generate a Password</h1>
+
+        <div class="password-container">
+            <textarea id="passwordDisplay" class="passwordDisplay" rows="2" readonly="readonly"></textarea>
+            <button id="copyButton" class="copyButton tooltip">
+                <span class="tooltipText">Copy to clipboard</span>
+                <span class="fa fa-clone"></span>
+            </button>
+        </div>
+        
+        <form id="passwordGeneratorForm" class="form">
+            <label for="charAmtNumber">Number of Characters</label>
+            <div class="charAmt">
+                
+                <input id="charAmtNumber" type="number" value="10" min ="1" max="50" style="position:relative; left: 70px;">
+            </div>
+            
+            <label for="includeUpperCase" >Include Uppercase</label>
+            <input id="includeUpperCase" type="checkbox">
+            
+            
+            <label for="includeNumbers">Include Numbers</label>
+            <input id="includeNumbers" type="checkbox">
+            
+            <label for="includeSymbols">Include Symbols</label>
+            <input id="includeSymbols" type="checkbox">
+            
+            <button id="reset" class="btn" type="reset">Reset</button>
+            <button id="submit" class="btn" type="submit">Generate PassKey</button>
+        </form>
+    </div>
+</body>
+</html>

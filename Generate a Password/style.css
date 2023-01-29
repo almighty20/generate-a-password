@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;     /* Changes font in buttons and input elements too */
+    color: White;
+}
+
+body {
+    /* Background */
+    background: url('wall.jpg') center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    /* Centering all content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    
+    padding: 3rem;
+    
+    border-radius: 2rem;
+    /* Centering all content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(42, 31, 31, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(100px);
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Form with input fields and buttons */
+.form {
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    /* Centering all content */
+    justify-content: center;
+    align-items: center;
+}
+label {
+    font-weight: 400;
+}
+div.charAmt {
+    /* aligning range and number to the center */
+    display: flex;
+    align-items: center;
+}
+#charAmtNumber {
+    width: 2rem;
+    outline: none;
+    border: 0.25px solid rgb(55, 31, 31);
+    margin: 2px 8px;
+    padding: 1px 1px 1px 5px;
+    border-radius: 5px;
+    background-color: rgb(74, 38, 38);
+}
+
+/* Buttons */
+.btn {
+    background-color: transparent;
+    padding: 0.25rem 1rem;
+    border: 1.2px solid #191f5e;
+    border-radius: 0.90rem;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
+#submit {
+    background-color: #207a4f;
+    padding: 10px;
+    
+}
+#reset { 
+    background-color: transparent; 
+    padding: 10px;
+}
+#submit:hover, #reset:hover {
+    background-color: rgb(26, 67, 55);
+    
+}
+
+/* Password Display Panel */
+.password-container {
+    background-color: rgb(46, 82, 59);
+    height: 3rem;
+    width: 380px;
+    padding: 0.5rem;
+    margin: 1rem;
+    /* Border */
+    border: 1px solid #472a2a;
+    border-radius: 0.5rem;
+    /* Centering all content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* When the content overflows the box */
+    word-break: break-all;
+    /* For the Copy Button */
+    position: relative;
+}
+.passwordDisplay {
+    background-color: rgb(81, 49, 49);
+    width: 360px;
+    height: 3.4rem;
+    outline: none;
+    border: none;
+    resize: none;
+    /* Text Formatting */
+    color: #5ea057;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    
+}
+.passwordDisplay:focus {
+    outline: none;
+}
+
+/* Small Copy Button at top-right */
+.copyButton {
+    background-color: rgb(101, 62, 62);
+    color: white;
+    /* Border */
+    border: 0.25px solid #1d524c;
+    border-radius: 0 0.25rem;
+    border-bottom: transparent;
+    border-left: transparent;
+    /* Posiion */
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+.fa {
+    color: rgb(25, 58, 25);
+    cursor: pointer;
+}
+
+/* Tooltip on hover */
+.tooltipText {
+    background-color: rgb(75, 41, 41);
+    color: rgb(252, 252, 252);
+    width: max-content;
+    padding: 0.15rem 0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    /* Position */
+    position: absolute;
+    bottom: 150%;
+    left: -210%;
+    /* Visibility */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid;
+    border-color: rgb(37, 32, 32) transparent transparent transparent;
+}
+.copyButton:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  input:checked  {
+    background-color: #1e5247;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 1px #2a465e;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
